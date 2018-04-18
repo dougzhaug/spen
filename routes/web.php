@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'Home\IndexController@index');
+Route::get('/about', 'Home\IndexController@about');
+Route::get('/help', 'Home\IndexController@help');
+Route::get('/contact', 'Home\IndexController@contact');

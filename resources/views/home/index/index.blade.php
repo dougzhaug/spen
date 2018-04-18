@@ -1,439 +1,111 @@
-<!DOCTYPE html>
-<html lang="zh">
+@extends('home.layouts.layout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="The Page Description">
-    <style type="text/css">@-ms-viewport{width: device-width;}</style>
-    <title>Beetle - Home page</title>
-    <link rel="stylesheet" href="{{asset_home('css/layers.min.css')}}" media="screen">
-    <link rel="stylesheet" href="{{asset_home('css/font-awesome.min.css')}}" media="screen">
-    <link rel="stylesheet" href="{{asset_home('style.css')}}" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="{{asset_home('img/apple-touch-icon.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset_home('img/apple-touch-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset_home('img/apple-touch-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset_home('img/apple-touch-icon-152x152.png')}}">
-</head>
-
-<body class="page">
-
-<header role="banner" class="transparent light">
-    <div class="row">
-        <div class="nav-inner row-content buffer-left buffer-right even clear-after">
-            <div id="brand">
-                <h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="home-01.html">赛鹏智联</a></h1>
-            </div><!-- brand -->
-            <a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
-            <nav>
-                <ul class="reset" role="navigation">
-                    <li class="menu-item">
-                        <a href="home-01.html">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="home-01.html">Generic Home Page</a></li>
-                            <li><a href="home-02.html">App Showcase</a></li>
-                            <li><a href="home-03.html">App Showcase Alternative</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="works-4-columns.html">Works</a>
-                        <ul class="sub-menu">
-                            <li><a href="works-4-columns.html">Four Columns Grid Style</a></li>
-                            <li><a href="works-3-columns.html">Three Columns Grid Style</a></li>
-                            <li><a href="works-4-columns-alternative.html">Four Columns Mosaic Style</a></li>
-                            <li><a href="works-3-columns-alternative.html">Three Columns Mosaic Style</a></li>
-                            <li><a href="works-4-columns-lightbox.html">Lightbox Gallery</a></li>
-                            <li><a href="single-work-post.html">Single Work Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="blog-4-columns-masonry.html">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-4-columns-masonry.html">Four Columns Grid</a></li>
-                            <li><a href="blog-list-sidebar.html">List Style with Sidebar</a></li>
-                            <li><a href="single-blog-post.html">Single Post</a></li>
-                            <li><a href="single-blog-post-sidebar.html">Single Post with Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a href="resume.html">Resume</a></li>
-                    <li class="menu-item">
-                        <a href="#">Features</a>
-                        <ul class="sub-menu">
-                            <li><a href="search.html">Search Page</a></li>
-                            <li><a href="no-results.html">Search Page - No Results</a></li>
-                            <li><a href="page-not-found.html">404 - Page Not Found</a></li>
-                            <li>
-                                <a href="#">Sub Menu</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Sub Sub Menu 01</a></li>
-                                    <li><a href="#">Sub Sub Menu 02</a></li>
-                                    <li><a href="#">Sub Sub Menu 03</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a href="contact.html">关于赛鹏</a></li>
-                </ul>
-            </nav>
-        </div><!-- row-content -->
-    </div><!-- row -->
-</header>
-
-<main role="main">
-    <div id="intro-wrap">
-        <div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">
-            <div class="intro-item" style="background-image: url(assets/home/img/f1.jpg);">
-                <div class="caption">
-                    <h2>微站</h2>
-                    <p>一键微商城上线</p>
-                    <a class="button white transparent" href="#">免费注册</a>
-                </div><!-- caption -->
-
+@section('header')
+    <!-- Header -->
+    <header id="head">
+        <div class="container">
+            <div class="row">
+                <h1 class="lead">会员营销，用赛鹏</h1>
+                <p class="tagline">精细化门店管理、员工管理、会员管理、商品管理等，为您提供个性化营销建议
+                    赛鹏 您的私人订制系统 <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus">注册</a></p>
+                <p><a class="btn btn-default btn-lg" role="button">马上加入</a> <a class="btn btn-action btn-lg" role="button">了解更多</a></p>
             </div>
-            <div class="intro-item" style="background-image: url(assets/home/img/f2.jpg);">
-                <div class="caption">
-                    <h2>Lab desk</h2>
-                    <p>Tools are all we need for creating good stuff</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+        </div>
+    </header>
+    <!-- /Header -->
+@endsection
 
-            </div>
-            <div class="intro-item" style="background-image: url(assets/home/img/f3.jpg);">
-                <div class="caption">
-                    <h2>Jules &amp; Jim</h2>
-                    <p>A team with over 20 years of realty experience</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+@section('container')
+    <!-- Intro -->
+    <div class="container text-center">
+        <br> <br>
+        <h2 class="thin">微会员</h2>
+        <p class="text-muted">
+            提供多样店铺模板，快速搭建网上商城<br/>
 
-            </div>
-            <div class="intro-item" style="background-image: url(assets/home/img/f4.jpg);">
-                <div class="caption">
-                    <h2>Workspace</h2>
-                    <p>We love to work inside dark rooms</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+            从渠道打通、会员管理到精准客户营销，全方位覆盖经营场景<br/>
 
-            </div>
-        </div><!-- intro -->
-    </div><!-- intro-wrap --><div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+            提供安全可靠的技术支持，你只需专注发展你的业务<br/>
+        </p>
+    </div>
+    <!-- /Intro-->
 
-    <div id="main">
+    <!-- Highlights - jumbotron -->
+    <div class="jumbotron top-space">
+        <div class="container">
 
-        <section class="row section call-to-action">
-            <div class="row-content buffer even">
-                <p>微站小程序、电商小程序、门店小程序、会务小程序，助您畅享小程序流量红利</p>
-                <a class="button red" href="#">注册</a>
-            </div>
-        </section>
+            <h3 class="text-center thin">我们的优势</h3>
 
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-paperfly"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Landing page</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-puzzle-piece fa-5"></i>个性化定制</h4></div>
+                    <div class="h-body text-center">
+                        <p>“彰显自我”已经不是一个简单的口号，付诸实践是时尚达人的不二选择，做最独特的自己，享受“专属”的服务，恰是很多消费者梦寐以求的。消费者通过度身定做这个过程，让自己的个性彰显无遗。
+                        </p>
                     </div>
                 </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-diamond"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Portfolio</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-weixin fa-5"></i>一键绑定</h4></div>
+                    <div class="h-body text-center">
+                        <p> 公众号一键绑定后，可在后台设置自定义菜单、自动回复、进行粉丝管理等。公众号是店铺面向粉丝的重要出口，可向粉丝群发推送活动通告、上新通知，和您的粉丝直接的交流和沟通，粉丝可以直接在微信公众号内点击进入您的店铺浏览商品，并完成最终的购买。</p>
                     </div>
                 </div>
-                <div class="column four last">
-                    <div class="small-icon red"><i class="icon icon-crown"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Resume</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-group fa-5"></i>会员分析</h4></div>
+                    <div class="h-body text-center">
+                        <p>通过会员分析，店家对于店铺的经营数据可以更加清晰，对于店铺的发展也能有一个更好的规划，可以帮助您更好的管店，是店家不可或缺的经营助手。</p>
                     </div>
                 </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-tablet"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Responsive</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="col-md-3 col-sm-6 highlight">
+                    <div class="h-caption"><h4><i class="fa fa-superpowers fa-5"></i>活动发布</h4></div>
+                    <div class="h-body text-center">
+                        <p>将有关的客户或者潜在客户邀请到一起，在特定的时间里参与一次活动。对于企业来说，活动发布的流程制定非常重要，由于企业活动发布关系着未来的销售，所以公道甚至出彩的流程策划会给企业的销售形成正面的影响。</p>
                     </div>
                 </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-megaphone"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Blog</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="column four last">
-                    <div class="small-icon red"><i class="icon icon-multiview"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Layer CSS</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+            </div> <!-- /row  -->
+
+        </div>
+    </div>
+    <!-- /Highlights -->
+
+    <!-- container -->
+    <div class="container">
+
+        <h2 class="text-center top-space">行业支持</h2>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>美发业</h3>
+                <p>线上储值卡、次卡、折扣卡，办卡容易成本低，提高顾客粘性和消费频率 顾客微信访问店铺，随时分享和传播;
+                    每一笔消费都有短信微信通知，安心周到，顾客更信任</p>
             </div>
-        </section>
-
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Latest News</h3></div>
-                <div class="grid-items blog-section masonry-style preload">
-                    <article class="item column six">
-                        <a href="#">
-                            <figure><img src="img/blog-01-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Interior design</h5>
-                                    <h2>A confortable desk</h2>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/work-03-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Relax, Hobbies</h5>
-                                    <h2>How I spend my time</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt-inner -->
-                            </div><!-- blog-excerpt -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/work-03-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Holidays</h5>
-                                    <h2>Snow &amp; silence</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/blog-04-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Music, Headphones</h5>
-                                    <h2>5 Hi-Fi headphones</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/north_inlet_j_fletcher_design-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Web Design</h5>
-                                    <h2>Build awesome layouts</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column six">
-                        <a href="#">
-                            <figure><img src="img/0165574c-1400x787-640x480.jpeg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Photography, Instagram</h5>
-                                    <h2>We are all made of stars</h2>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <div class="shuffle-sizer three"></div>
-                </div><!-- grid-items -->
-                <div class="more-btn"><a class="button transparent aqua" href="#">Read all News</a></div>
+            <div class="col-sm-6">
+                <h3>餐饮业</h3>
+                <p>顾客用微信访问您的店铺，将获得几近完美的浏览体验
+                    页面加载和呈现的效果，就像微信自己的界面一样
+                    使用最前沿的网页技术，是时候告别那些十年前的网页了</p>
             </div>
-        </section>
+        </div> <!-- /row -->
 
-        <section class="row section text-light" style="background-color:#cec8bc">
-            <div class="row-content buffer even clear-after">
-                <div class="column six push-six last-special">
-                    <h2>OneChat Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                    <p><em>- Courtesy of <a href="http://stockapps.net/" target="_blank">Stockapps</a>.</em></p>
-                    <a class="button transparent white" href="http://stockapps.net/">Explore</a>
-                </div>
-                <div class="side-mockup left-mockup animation">
-                    <div class="slider iphone-slider white" data-autoplay="3000">
-                        <figure>
-                            <div><img src="img/chat-01.jpg" alt=""></div>
-                            <div><img src="img/chat-02.jpg" alt=""></div>
-                            <div><img src="img/chat-03.jpg" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                        </figure>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>酒店业</h3>
+                <p>
+                    多业态多场景支持，全面解决酒店行业移动营销需求！快速搭建酒店自有直销预订平台，减少佣金支出，降低运营成本
+                </p>
             </div>
-        </section>
-
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Skills</h3></div>
-                <p class="centertxt">I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
-                <div class="chart" data-percent="73" data-bar-color="#fd685b" data-animate="2000">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">User Interface</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="85" data-bar-color="#ffce54" data-animate="2500">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">Front-end</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="70" data-bar-color="#a0d468" data-animate="3000">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">User Experience</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="95" data-bar-color="#ac92ec" data-animate="3500">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">Icon Design</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
+            <div class="col-sm-6">
+                <h3>分销业</h3>
+                <p>发动粉丝、员工进行分销，快速招募不断裂变，直接对接百万微商城商家和微小店店主，建立全面的分销网络和多方位推广渠道，实现全网分销</p>
             </div>
-        </section>
+        </div> <!-- /row -->
 
-        <section class="row section text-light" style="background-color:#4FC1E9;">
-            <div class="row-content buffer even clear-after">
-                <div class="testimonial-slider centertxt" data-autoplay="5000" data-pagination="true" data-transition="fade" data-autoheight="false">
-                    <div class="quote">
-                        <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
-                        <div class="author">John Lennon</div>
-                    </div><!-- quote -->
-                    <div class="quote">
-                        <p>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'.."</p>
-                        <div class="author">Fabrizio De Andr&egrave;</div>
-                    </div><!-- quote -->
-                    <div class="quote">
-                        <p>"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."</p>
-                        <div class="author">B.B. King</div>
-                    </div><!-- quote -->
-                </div><!-- testimonial-slider -->
-            </div>
-        </section>
+        <div class="jumbotron top-space">
+            <h4>赛鹏智联为满足商户多元化的需求而打造的一站式第三方服务选购平台。
+                服务市场现已基本涵盖公众号运营所需要的各类应用和服务，包括：电商管理、收银系统、营销插件、客户关系管理等，助力商户解决运营难题。</h4>
+            <p class="text-right"><a class="btn btn-primary btn-large">了解更多 »</a></p>
+        </div>
 
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-leaf"></i></div>
-                        <div class="count-number" data-from="0" data-to="1284" data-speed="1000" data-refresh-interval="25"></div>
-                        <div class="count-subject">Active projects</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-heart"></i></div>
-                        <div class="count-number" data-from="0" data-to="28903" data-speed="1500" data-refresh-interval="25"></div>
-                        <div class="count-subject">Users who love them</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-tshirt"></i></div>
-                        <div class="count-number" data-from="0" data-to="326" data-speed="2000" data-refresh-interval="25"></div>
-                        <div class="count-subject">T-Shirts &amp; Gadgets</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three last">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-graph"></i></div>
-                        <div class="count-number" data-from="0" data-to="58802" data-speed="2500" data-refresh-interval="25"></div>
-                        <div class="count-subject">Everyday visitors</div>
-                    </div><!-- count-item -->
-                </div>
-            </div>
-        </section>
-
-        <section class="row section text-light" style="background-color:#FF8CB9">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Frankie's Dribbble Shots</h3></div>
-                <div class="dribbble-items portfolio-section preload" data-username="frankiefreesbie" data-elements="4">
-                </div><!-- dribbble-items -->
-                <div class="more-btn"><a class="button transparent white" href="#frankiefreesbie">View all Shots</a></div>
-            </div>
-        </section>
-
-        <section class="row section call-to-action">
-            <div class="row-content buffer even animation">
-                <p>Have you fallen in love with Beetle?</p>
-                <a class="button red" href="#">Buy it now!</a>
-            </div>
-        </section>
-
-
-    </div><!-- id-main -->
-</main><!-- main -->
-
-<footer role="contentinfo">
-    <div class="row">
-        <div class="row-content buffer clear-after">
-            <section id="top-footer">
-                <div class="widget column three"><!-- la class="widget" è forse generata utomaticamente da wp -->
-                    <h4>Menu</h4>
-                    <ul class="plain">
-                        <li><a href="home-01.html">Home</a></li>
-                        <li><a href="works-3-columns.html">Portfolio</a></li>
-                        <li><a href="blog-4-columns-masonry.html">Blog</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="widget column three">
-                    <h4>Archives</h4>
-                    <ul class="plain">
-                        <li><a href="#">March 2014</a></li>
-                        <li><a href="#">April 2014</a></li>
-                        <li><a href="#">May 2014</a></li>
-                        <li><a href="#">June 2014</a></li>
-                        <li><a href="#">July 2014</a></li>
-                    </ul>
-                </div>
-                <div class="widget column three">
-                    <h4>Widget</h4>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="widget meta-social column three">
-                    <h4>Follow Us</h4>
-                    <ul class="inline">
-                        <li><a href="#" class="twitter-share border-box"><i class="fa fa-twitter fa-lg"></i></a></li>
-                        <li><a href="#" class="facebook-share border-box"><i class="fa fa-facebook fa-lg"></i></a></li>
-                        <li><a href="#" class="pinterest-share border-box"><i class="fa fa-pinterest fa-lg"></i></a></li>
-                    </ul>
-                </div>
-            </section><!-- top-footer -->
-            <section id="bottom-footer">
-                <p class="keep-left">&copy; 2014 Mokaine. All Rights Reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-                <p class="keep-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            </section><!-- bottom-footer -->
-        </div><!-- row-content -->
-    </div><!-- row -->
-</footer>
-
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="{{asset_home('js/plugins.js')}}"></script>
-<script src="{{asset_home('js/beetle.js')}}"></script>
-
-</body>
-
-</html>
+    </div>	<!-- /container -->
+@endsection

@@ -1,439 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="The Page Description">
-    <style type="text/css">@-ms-viewport{width: device-width;}</style>
-    <title>Beetle - Home page</title>
-    <link rel="stylesheet" href="css/layers.min.css" media="screen">
-    <link rel="stylesheet" href="css/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" href="style.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+    <title>Progressus - Free business bootstrap template by GetTemplate</title>
+
+    <link rel="shortcut icon" href="{{asset_home('images/gt_favicon.png')}}">
+
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="{{asset_home('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset_home('css/font-awesome.min.css')}}">
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="{{asset_home('css/bootstrap-theme.css')}}" media="screen" >
+    <link rel="stylesheet" href="{{asset_home('css/main.css')}}">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="{{asset_home('js/html5shiv.js')}}"></script>
+    <script src="{{asset_home('js/respond.min.js')}}"></script>
     <![endif]-->
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png">
 </head>
 
-<body class="page">
+<body class="home">
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Button for smallest screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="{{url('')}}"><img src="{{asset_home('images/logo.png')}}" alt="赛鹏科技"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="{{url('')}}">首页</a></li>
+                <li><a href="{{url('about')}}">关于我们</a></li>
+                <li><a href="{{url('help')}}">帮助中心</a></li>
+                {{--<li class="dropdown">--}}
+                    {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>--}}
+                    {{--<ul class="dropdown-menu">--}}
+                        {{--<li><a href="sidebar-left.html">Left Sidebar</a></li>--}}
+                        {{--<li class="active"><a href="sidebar-right.html">Right Sidebar</a></li>--}}
+                    {{--</ul>--}}
+                {{--</li>--}}
+                <li><a href="{{url('contact')}}">联系我们</a></li>
+                <li><a class="btn" style="line-height:12px;" href="signin.html">登陆</a></li>
+                <li><a class="btn" style="line-height:12px;" href="signin.html">注册</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<!-- /.navbar -->
 
-<header role="banner" class="transparent light">
-    <div class="row">
-        <div class="nav-inner row-content buffer-left buffer-right even clear-after">
-            <div id="brand">
-                <h1 class="reset"><!--<img src="img/logo.png" alt="logo">--><a href="home-01.html">Beetle</a></h1>
-            </div><!-- brand -->
-            <a id="menu-toggle" href="#"><i class="fa fa-bars fa-lg"></i></a>
-            <nav>
-                <ul class="reset" role="navigation">
-                    <li class="menu-item">
-                        <a href="home-01.html">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="home-01.html">Generic Home Page</a></li>
-                            <li><a href="home-02.html">App Showcase</a></li>
-                            <li><a href="home-03.html">App Showcase Alternative</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="works-4-columns.html">Works</a>
-                        <ul class="sub-menu">
-                            <li><a href="works-4-columns.html">Four Columns Grid Style</a></li>
-                            <li><a href="works-3-columns.html">Three Columns Grid Style</a></li>
-                            <li><a href="works-4-columns-alternative.html">Four Columns Mosaic Style</a></li>
-                            <li><a href="works-3-columns-alternative.html">Three Columns Mosaic Style</a></li>
-                            <li><a href="works-4-columns-lightbox.html">Lightbox Gallery</a></li>
-                            <li><a href="single-work-post.html">Single Work Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="blog-4-columns-masonry.html">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-4-columns-masonry.html">Four Columns Grid</a></li>
-                            <li><a href="blog-list-sidebar.html">List Style with Sidebar</a></li>
-                            <li><a href="single-blog-post.html">Single Post</a></li>
-                            <li><a href="single-blog-post-sidebar.html">Single Post with Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a href="resume.html">Resume</a></li>
-                    <li class="menu-item">
-                        <a href="#">Features</a>
-                        <ul class="sub-menu">
-                            <li><a href="search.html">Search Page</a></li>
-                            <li><a href="no-results.html">Search Page - No Results</a></li>
-                            <li><a href="page-not-found.html">404 - Page Not Found</a></li>
-                            <li>
-                                <a href="#">Sub Menu</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Sub Sub Menu 01</a></li>
-                                    <li><a href="#">Sub Sub Menu 02</a></li>
-                                    <li><a href="#">Sub Sub Menu 03</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div><!-- row-content -->
-    </div><!-- row -->
-</header>
+@section('header')
+    <header id="head" class="secondary"></header>
+@show
 
-<main role="main">
-    <div id="intro-wrap">
-        <div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">
-            <div class="intro-item" style="background-image: url(img/f1.jpg);">
-                <div class="caption">
-                    <h2>Beetle</h2>
-                    <p>HTML5 template for landing page, blog and resume</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+@yield('container')
 
-            </div>
-            <div class="intro-item" style="background-image: url(img/f2.jpg);">
-                <div class="caption">
-                    <h2>Lab desk</h2>
-                    <p>Tools are all we need for creating good stuff</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
 
-            </div>
-            <div class="intro-item" style="background-image: url(img/f3.jpg);">
-                <div class="caption">
-                    <h2>Jules &amp; Jim</h2>
-                    <p>A team with over 20 years of realty experience</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+<footer id="footer" class="top-space">
 
-            </div>
-            <div class="intro-item" style="background-image: url(img/f4.jpg);">
-                <div class="caption">
-                    <h2>Workspace</h2>
-                    <p>We love to work inside dark rooms</p>
-                    <a class="button white transparent" href="#">Read More</a>
-                </div><!-- caption -->
+    <div class="footer1">
+        <div class="container">
+            <div class="row">
 
-            </div>
-        </div><!-- intro -->
-    </div><!-- intro-wrap --><div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
-
-    <div id="main">
-
-        <section class="row section call-to-action">
-            <div class="row-content buffer even">
-                <p>Have you fallen in love with Beetle?</p>
-                <a class="button red" href="#">Buy it now!</a>
-            </div>
-        </section>
-
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-paperfly"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Landing page</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">联系我们</h3>
+                    <div class="widget-body">
+                        <p>+86 18830102005<br>
+                            <a href="mailto:#">doug@spen.vip</a><br>
+                            <br>
+                            周一到周日 9:00 ~ 18:00
+                        </p>
                     </div>
                 </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-diamond"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Portfolio</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                {{--<div class="col-md-3 widget">--}}
+                    {{--<h3 class="widget-title">Follow me</h3>--}}
+                    {{--<div class="widget-body">--}}
+                        {{--<p class="follow-me-icons">--}}
+                            {{--<a href=""><i class="fa fa-twitter fa-2"></i></a>--}}
+                            {{--<a href=""><i class="fa fa-dribbble fa-2"></i></a>--}}
+                            {{--<a href=""><i class="fa fa-github fa-2"></i></a>--}}
+                            {{--<a href=""><i class="fa fa-facebook fa-2"></i></a>--}}
+                        {{--</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="col-md-6 widget">--}}
+                    {{--<h3 class="widget-title">Text widget</h3>--}}
+                    {{--<div class="widget-body">--}}
+                        {{--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>--}}
+                        {{--<p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            </div> <!-- /row of widgets -->
+        </div>
+    </div>
+
+    <div class="footer2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p class="simplenav">
+                            <a href="#">首页</a> |
+                            <a href="about.html">关于我们</a> |
+                            <a href="sidebar-right.html">帮助中心</a> |
+                            <a href="contact.html">联系我们</a> |
+                            <b><a href="signup.html">登陆</a></b>
+                        </p>
                     </div>
                 </div>
-                <div class="column four last">
-                    <div class="small-icon red"><i class="icon icon-crown"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Resume</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p class="text-right">
+                            Copyright &copy; 2018, www.spen.vip <a href="http://www.spen.vip/" target="_blank" title="赛鹏">赛鹏科技</a></p>
                     </div>
                 </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-tablet"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Responsive</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="column four">
-                    <div class="small-icon red"><i class="icon icon-megaphone"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Blog</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="column four last">
-                    <div class="small-icon red"><i class="icon icon-multiview"></i></div>
-                    <div class="small-icon-text clear-after">
-                        <h4>Layer CSS</h4>
-                        <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Latest News</h3></div>
-                <div class="grid-items blog-section masonry-style preload">
-                    <article class="item column six">
-                        <a href="#">
-                            <figure><img src="img/blog-01-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Interior design</h5>
-                                    <h2>A confortable desk</h2>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/work-03-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Relax, Hobbies</h5>
-                                    <h2>How I spend my time</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt-inner -->
-                            </div><!-- blog-excerpt -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/work-03-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Holidays</h5>
-                                    <h2>Snow &amp; silence</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/blog-04-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Music, Headphones</h5>
-                                    <h2>5 Hi-Fi headphones</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column three">
-                        <a href="#">
-                            <figure><img src="img/north_inlet_j_fletcher_design-640x480.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Web Design</h5>
-                                    <h2>Build awesome layouts</h2>
-                                    <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <article class="item column six">
-                        <a href="#">
-                            <figure><img src="img/0165574c-1400x787-640x480.jpeg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
-                            <div class="blog-excerpt">
-                                <div class="blog-excerpt-inner">
-                                    <h5 class="meta-post">Photography, Instagram</h5>
-                                    <h2>We are all made of stars</h2>
-                                </div><!-- blog-excerpt -->
-                            </div><!-- blog-excerpt-inner -->
-                        </a>
-                    </article>
-                    <div class="shuffle-sizer three"></div>
-                </div><!-- grid-items -->
-                <div class="more-btn"><a class="button transparent aqua" href="#">Read all News</a></div>
-            </div>
-        </section>
+            </div> <!-- /row of widgets -->
+        </div>
+    </div>
 
-        <section class="row section text-light" style="background-color:#cec8bc">
-            <div class="row-content buffer even clear-after">
-                <div class="column six push-six last-special">
-                    <h2>OneChat Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
-                    <p><em>- Courtesy of <a href="http://stockapps.net/" target="_blank">Stockapps</a>.</em></p>
-                    <a class="button transparent white" href="http://stockapps.net/">Explore</a>
-                </div>
-                <div class="side-mockup left-mockup animation">
-                    <div class="slider iphone-slider white" data-autoplay="3000">
-                        <figure>
-                            <div><img src="img/chat-01.jpg" alt=""></div>
-                            <div><img src="img/chat-02.jpg" alt=""></div>
-                            <div><img src="img/chat-03.jpg" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                            <div><img src="http://placehold.it/640x1136/ddd/fff&text=Beetle%20image" alt=""></div>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Skills</h3></div>
-                <p class="centertxt">I’m an experienced and passionate user interface designer with interaction design background.<br>My goal is to make the world wide web a better place by designing beautiful user experiences, one site at a time.</p>
-                <div class="chart" data-percent="73" data-bar-color="#fd685b" data-animate="2000">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">User Interface</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="85" data-bar-color="#ffce54" data-animate="2500">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">Front-end</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="70" data-bar-color="#a0d468" data-animate="3000">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">User Experience</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-                <div class="chart" data-percent="95" data-bar-color="#ac92ec" data-animate="3500">
-                    <div class="chart-content">
-                        <div class="percent"></div>
-                        <div class="chart-title">Icon Design</div>
-                    </div><!-- chart-content -->
-                </div><!-- chart -->
-            </div>
-        </section>
-
-        <section class="row section text-light" style="background-color:#4FC1E9;">
-            <div class="row-content buffer even clear-after">
-                <div class="testimonial-slider centertxt" data-autoplay="5000" data-pagination="true" data-transition="fade" data-autoheight="false">
-                    <div class="quote">
-                        <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
-                        <div class="author">John Lennon</div>
-                    </div><!-- quote -->
-                    <div class="quote">
-                        <p>"Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'.."</p>
-                        <div class="author">Fabrizio De Andr&egrave;</div>
-                    </div><!-- quote -->
-                    <div class="quote">
-                        <p>"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."</p>
-                        <div class="author">B.B. King</div>
-                    </div><!-- quote -->
-                </div><!-- testimonial-slider -->
-            </div>
-        </section>
-
-        <section class="row section">
-            <div class="row-content buffer even clear-after">
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-leaf"></i></div>
-                        <div class="count-number" data-from="0" data-to="1284" data-speed="1000" data-refresh-interval="25"></div>
-                        <div class="count-subject">Active projects</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-heart"></i></div>
-                        <div class="count-number" data-from="0" data-to="28903" data-speed="1500" data-refresh-interval="25"></div>
-                        <div class="count-subject">Users who love them</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-tshirt"></i></div>
-                        <div class="count-number" data-from="0" data-to="326" data-speed="2000" data-refresh-interval="25"></div>
-                        <div class="count-subject">T-Shirts &amp; Gadgets</div>
-                    </div><!-- count-item -->
-                </div>
-                <div class="column three last">
-                    <div class="count-item">
-                        <div class="small-icon red"><i class="icon icon-graph"></i></div>
-                        <div class="count-number" data-from="0" data-to="58802" data-speed="2500" data-refresh-interval="25"></div>
-                        <div class="count-subject">Everyday visitors</div>
-                    </div><!-- count-item -->
-                </div>
-            </div>
-        </section>
-
-        <section class="row section text-light" style="background-color:#FF8CB9">
-            <div class="row-content buffer even clear-after">
-                <div class="section-title"><h3>Frankie's Dribbble Shots</h3></div>
-                <div class="dribbble-items portfolio-section preload" data-username="frankiefreesbie" data-elements="4">
-                </div><!-- dribbble-items -->
-                <div class="more-btn"><a class="button transparent white" href="#frankiefreesbie">View all Shots</a></div>
-            </div>
-        </section>
-
-        <section class="row section call-to-action">
-            <div class="row-content buffer even animation">
-                <p>Have you fallen in love with Beetle?</p>
-                <a class="button red" href="#">Buy it now!</a>
-            </div>
-        </section>
-
-
-    </div><!-- id-main -->
-</main><!-- main -->
-
-<footer role="contentinfo">
-    <div class="row">
-        <div class="row-content buffer clear-after">
-            <section id="top-footer">
-                <div class="widget column three"><!-- la class="widget" è forse generata utomaticamente da wp -->
-                    <h4>Menu</h4>
-                    <ul class="plain">
-                        <li><a href="home-01.html">Home</a></li>
-                        <li><a href="works-3-columns.html">Portfolio</a></li>
-                        <li><a href="blog-4-columns-masonry.html">Blog</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="widget column three">
-                    <h4>Archives</h4>
-                    <ul class="plain">
-                        <li><a href="#">March 2014</a></li>
-                        <li><a href="#">April 2014</a></li>
-                        <li><a href="#">May 2014</a></li>
-                        <li><a href="#">June 2014</a></li>
-                        <li><a href="#">July 2014</a></li>
-                    </ul>
-                </div>
-                <div class="widget column three">
-                    <h4>Widget</h4>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="widget meta-social column three">
-                    <h4>Follow Us</h4>
-                    <ul class="inline">
-                        <li><a href="#" class="twitter-share border-box"><i class="fa fa-twitter fa-lg"></i></a></li>
-                        <li><a href="#" class="facebook-share border-box"><i class="fa fa-facebook fa-lg"></i></a></li>
-                        <li><a href="#" class="pinterest-share border-box"><i class="fa fa-pinterest fa-lg"></i></a></li>
-                    </ul>
-                </div>
-            </section><!-- top-footer -->
-            <section id="bottom-footer">
-                <p class="keep-left">&copy; 2014 Mokaine. All Rights Reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-                <p class="keep-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-            </section><!-- bottom-footer -->
-        </div><!-- row-content -->
-    </div><!-- row -->
 </footer>
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/beetle.js"></script>
-
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="{{asset_home('js/headroom.min.js')}}"></script>
+<script src="{{asset_home('js/jQuery.headroom.min.js')}}"></script>
+<script src="{{asset_home('js/template.js')}}"></script>
 </body>
-
 </html>
