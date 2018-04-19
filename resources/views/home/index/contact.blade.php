@@ -5,7 +5,7 @@
     <div class="container">
 
         <ol class="breadcrumb">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="{{url('')}}">首页</a></li>
             <li class="active">联系我们</li>
         </ol>
 
@@ -21,22 +21,23 @@
                     我们很乐意听取您的意见。有兴趣一起工作？填写下面的表格并附上关于您的项目的一些信息，我们会尽快回复您。
                 </p>
                 <br>
-                <form>
+                <form action="{{url('contact')}}" method="post">
+                    <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                     <div class="row">
                         <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="姓名">
+                            <input class="form-control" name="name" value="{{old('name')}}" type="text" placeholder="姓名">
                         </div>
                         <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="Email">
+                            <input class="form-control" name="email" value="{{old('email')}}" type="text" placeholder="Email">
                         </div>
                         <div class="col-sm-4">
-                            <input class="form-control" type="text" placeholder="手机号">
+                            <input class="form-control" name="phone" value="{{old('phone')}}" type="text" placeholder="手机号">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-12">
-                            <textarea placeholder="详细信息..." class="form-control" rows="9"></textarea>
+                            <textarea placeholder="详细信息..." name="contents" class="form-control" rows="9">{{old('contents')}}</textarea>
                         </div>
                     </div>
                     <br>
@@ -50,6 +51,15 @@
                     </div>
                 </form>
 
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
             </article>
             <!-- /Article -->
 

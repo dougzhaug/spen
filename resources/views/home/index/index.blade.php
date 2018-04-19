@@ -7,8 +7,8 @@
             <div class="row">
                 <h1 class="lead">会员营销，用赛鹏</h1>
                 <p class="tagline">精细化门店管理、员工管理、会员管理、商品管理等，为您提供个性化营销建议
-                    赛鹏 您的私人订制系统 <a href="http://www.gettemplate.com/?utm_source=progressus&amp;utm_medium=template&amp;utm_campaign=progressus">注册</a></p>
-                <p><a class="btn btn-default btn-lg" role="button">马上加入</a> <a class="btn btn-action btn-lg" role="button">了解更多</a></p>
+                    赛鹏 您的私人订制系统 <a href="{{url('register')}}">注册</a></p>
+                <p><a class="btn btn-default btn-lg" href="{{url('register')}}" role="button">马上加入</a> <a class="btn btn-action btn-lg" href="{{url('about')}}" role="button">了解更多</a></p>
             </div>
         </div>
     </header>
@@ -104,7 +104,7 @@
         <div class="jumbotron top-space">
             <h4>赛鹏智联为满足商户多元化的需求而打造的一站式第三方服务选购平台。
                 服务市场现已基本涵盖公众号运营所需要的各类应用和服务，包括：电商管理、收银系统、营销插件、客户关系管理等，助力商户解决运营难题。</h4>
-            <p class="text-right"><a class="btn btn-primary btn-large">了解更多 »</a></p>
+            <p class="text-right"><a href="{{url('about')}}" class="btn btn-primary btn-large">了解更多 »</a></p>
         </div>
 
     </div>	<!-- /container -->

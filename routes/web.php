@@ -15,3 +15,9 @@ Route::get('/', 'Home\IndexController@index');
 Route::get('/about', 'Home\IndexController@about');
 Route::get('/help', 'Home\IndexController@help');
 Route::get('/contact', 'Home\IndexController@contact');
+Route::post('/contact', 'Home\IndexController@contact');
+
+/*登陆*/
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

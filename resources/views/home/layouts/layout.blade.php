@@ -47,8 +47,32 @@
                     {{--</ul>--}}
                 {{--</li>--}}
                 <li><a href="{{url('contact')}}">联系我们</a></li>
-                <li><a class="btn" style="line-height:12px;" href="signin.html">登陆</a></li>
-                <li><a class="btn" style="line-height:12px;" href="signin.html">注册</a></li>
+                <!-- Authentication Links -->
+                @guest
+                    <li><a class="btn" style="line-height:12px;background-color: white;color:rgba(3, 116, 249, 0.8);" href="{{url('login')}}">登陆</a></li>
+                    <li><a class="btn" style="line-height:12px;" href="{{url('register')}}">注册</a></li>
+                @else
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endguest
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>
